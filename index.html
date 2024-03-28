@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>MiClubbi</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <!--<link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>-->
     <link rel='stylesheet' type='text/css' media='screen' href='salida.css'>
@@ -15,7 +15,7 @@
         <div class="contenedor-titulo">
     
             <div class="svg-container">
-                <svg width="100%" height="100%" viewBox="0 0 2000 500" >
+                <svg  viewBox="0 0 2000 500" >
                     <!-- define el area circular para recortar del svg -->
                     <defs>
                         <clipPath id="circleClip">
@@ -62,66 +62,78 @@
             </div>
     
             <div class="contenedor-logo">
-                <img width="100%" height="100%" src="animacion/letras_bolita_fondo.gif" alt="Nombre App">
+                <img src="animacion/letras_bolita_fondo.gif" alt="Nombre App">
             </div>
     
         </div>
 
-        <div class="titulo">Proyecto realizado como tarea de DIW</div>
+        <!-- Barra de navegación -->
+    <nav>
+        <ul class="barra-navegacion">
+            <li><a href="#titulo">Inicio</a></li>
+            <li><a href="#layout_imagenes">Capturas app</a></li>
+            <li><a href="#tutorial">Video explicativo</a></li>
+        </ul>
+    </nav>
+
+    </header>
+
+    <main>
+
+        <h1 id="titulo" class="titulo">Proyecto realizado como tarea de DIW</h1>
         <p class="parrafo">Aplicacion enfocada hacia el deportista en particular. En su forma de vida y en su bienestar. Para ayudarle y hacer que sus objetivos se cumplan, 
             sin sacrificar su salud física y mental en el camino.
             Para ello, cuenta con módulos específicos de nutrición, estilos de vida y entrenamientos fuera de la cancha. 
             Todos ellos adaptados para ser usados fácilmente y que sean atractivos tanto para los menores (los deportistas) 
             como para los adultos (que son los que realmente gestionarán la aplicación).</p>
-           
-    </header>
+         
+        
+            <ol id="layout_imagenes" class="lista-numerada">
 
-    <main>
-        <ol class="lista-numerada">
+                <!--<div class="texto_layout">Capturas de pantalla de la App</div>-->
+                <li>Capturas de pantalla de la App</li>
 
-            <!--<div class="texto_layout">Capturas de pantalla de la App</div>-->
-            <li>Capturas de pantalla de la App</li>
-
-            <section id="layout_imagenes">
-                <div class="contenedor-imagenes">
-                    <div class="fila">
-                        <div class="columna">
-                            <img src="imagenes/login.jpg" alt="Pantalla de login">
+                
+                    <div class="contenedor-imagenes">
+                        <div class="fila">
+                            <div class="columna">
+                                <img src="imagenes/login.jpg" alt="Pantalla de login">
+                            </div>
+                            <div class="columna">
+                                <img src="imagenes/main.jpg" alt="Pantalla principal">
+                            </div>
+                            <div class="columna">
+                                <img src="imagenes/avisos.jpg" alt="Pantalla de avisos y notificaciones">
+                            </div>
                         </div>
-                        <div class="columna">
-                            <img src="imagenes/main.jpg" alt="Pantalla principal">
-                        </div>
-                        <div class="columna">
-                            <img src="imagenes/avisos.jpg" alt="Pantalla de avisos y notificaciones">
+                        <div class="fila">
+                            <div class="columna">
+                                <img src="imagenes/calendario.jpg" alt="Pantalla de calendario">
+                            </div>
+                            <div class="columna">
+                                <img src="imagenes/galeria.jpg" alt="Pantalla de galeria">
+                            </div>
+                            <div class="columna">
+                                <img src="imagenes/perfil.jpg" alt="Pantalla del perfil del usuario">
+                            </div>
                         </div>
                     </div>
-                    <div class="fila">
-                        <div class="columna">
-                            <img src="imagenes/calendario.jpg" alt="Pantalla de calendario">
-                        </div>
-                        <div class="columna">
-                            <img src="imagenes/galeria.jpg" alt="Pantalla de galeria">
-                        </div>
-                        <div class="columna">
-                            <img src="imagenes/perfil.jpg" alt="Pantalla del perfil del usuario">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="tutorial">
-               <!-- <h1 class="titulo">Video Tutorial: Introducción a Miclubbi</h1>-->
+                
+            
+                <!-- <h1 class="titulo">Video Tutorial: Introducción a Miclubbi</h1>-->
                 <li>Video Tutorial: Introducción a Miclubbi</li>
 
-                <div class="contenedor-video">
-                    <div style="padding:74.72% 0 0 0;position:relative;">
-                        <iframe src="https://player.vimeo.com/video/928134675?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="MiClubbi Presentacion App"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                <section id="tutorial">
                 
-                    <a href="https://player.vimeo.com/video/928134675?autoplay=1" target="_blank">Ver Video en Vimeo</a>
+                    <div class="contenedor-video">
+                        <div style="padding:74.72% 0 0 0;position:relative;">
+                            <iframe src="https://player.vimeo.com/video/928134675?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="MiClubbi Presentacion App"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                     
-                </div>
-            </section>
-        </ol>
+                        <a href="https://player.vimeo.com/video/928134675?autoplay=1" target="_blank">Ver Video en Vimeo</a>
+                        
+                    </div>
+                </section>
+            </ol>
     </main> 
 
 

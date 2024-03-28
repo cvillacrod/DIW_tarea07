@@ -2,9 +2,9 @@
 $bordes: black;
 $border-width: 2px;
 $texto:black;
-$letras_logo: #f3f0ae;
+$letras_logo: #f4c770;
 $enlace: #FFA000;
-$fondo: #009929;
+$fondo_color: #009929;
 $mar: #1595c0;
 $olas: #daecf5;
 $cielo:#daecf5;
@@ -24,7 +24,10 @@ $sgv_max-width: 100%;
 $video_width: 50%;
 $max-width:100%;
 $contenedor-imagenes-width: 70%;
+
+$width_nav: 30%;
 $margen-sup: 10px; 
+$padding_nav: 10px; 
 
 $sizes:(18px,20px,22px,24px,26px);
 
@@ -38,6 +41,41 @@ body{
     background-color:$fondo;    
 }*/
 
+/* barra de navegacon */
+ul.barra-navegacion {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: $letras_logo;
+    text-align: center;
+    font-size:  nth($sizes,3);
+}
+
+/*elementos de la barra de navegacion */
+ul.barra-navegacion li {
+    display: inline-block;
+    width: $width_nav; /* Cada elemento ocupa un tercio del ancho */
+}
+
+/* enlaces */
+ul.barra-navegacion li a {
+    display: block;
+    color: $texto;
+    text-decoration: none;
+    padding: $padding_nav;
+    font-weight: bold;
+}
+
+ul.barra-navegacion li a:hover {
+    color: $fondo_color;
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 600px) {
+    ul.barra-navegacion li {
+        width: 100%; /* Cada elemento ocupa todo el ancho */
+    }
+}
 
 
 /*define un mixin */
