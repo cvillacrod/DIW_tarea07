@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!--<link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>-->
+    <link rel='stylesheet' type='text/css' media='screen' href='salida.css'>
+</head>
+<body>
+
+
+    <header>
+        <div class="contenedor-titulo">
+    
+            <div class="svg-container">
+                <svg width="100%" height="100%" viewBox="0 0 2000 500" >
+                    <!-- define el area circular para recortar del svg -->
+                    <defs>
+                        <clipPath id="circleClip">
+                        <circle cx="420" cy="250" r="250"/>
+                        </clipPath>
+                    </defs>
+                
+                    <!-- Aplicar el área de recorte al contenido SVG -->
+                    <g clip-path="url(#circleClip)">
+                        <!--mar-->
+                        <rect class="mar" width="100%" height="100%" />
+    
+                        <!-- olas -->                    
+                        <line x1="100" y1="320" x2="1900" y2="320" class="olas_impares" />
+                        <line x1="100" y1="340" x2="1900" y2="340" class="olas_pares" />
+                        <line x1="100" y1="360" x2="1900" y2="360" class="olas_impares" />
+                        <line x1="100" y1="380" x2="1900" y2="380" class="olas_pares" />
+                        <line x1="100" y1="400" x2="1900" y2="400" class="olas_impares" />
+                        <line x1="100" y1="420" x2="1900" y2="420" class="olas_pares" />
+                        <line x1="100" y1="440" x2="1900" y2="440" class="olas_impares" />
+                        <line x1="100" y1="460" x2="1900" y2="460" class="olas_pares" />
+                        <line x1="100" y1="480" x2="1900" y2="480" class="olas_impares" />
+    
+                        <!--cielo-->
+                        <rect class="cielo" width="100%" height="60%" />
+                        <!--tabla-->
+                        <ellipse class="tabla" cx="400" cy="300" rx="210" ry="30" />
+                        <!--vela-->
+                        <polygon class="vela" points="470,30 470,300 300,220" />
+                        <!-- cara -->
+                        <circle class="cara" cx="500" cy="100" r="30" />
+                        <!-- cuerpo -->
+                        <polygon class="cuerpo" points="470,250 530,250 500,130" />
+                        <!--pierna izquierda -->
+                        <rect class="pierna" x="480" y="250" width="10" height="50" />
+                        <!--pierna derecha -->
+                        <rect class="pierna" x="510" y="250" width="10" height="50" />
+                        <!--brazo derecho -->
+                        <rect class="brazo" x="400" y="180" width="100" height="12" />
+                        <!--brazo izquierdo -->
+                        <rect class="brazo" x="420" y="160" width="70" height="12" />
+            </g>
+                </svg>
+            </div>
+    
+            <div class="contenedor-logo">
+                <img width="100%" height="100%" src="animacion/letras_bolita_fondo.gif" alt="Nombre App">
+            </div>
+    
+        </div>
+
+        <div class="titulo">Proyecto realizado como tarea de DIW</div>
+        <p class="parrafo">Aplicacion enfocada hacia el deportista en particular. En su forma de vida y en su bienestar. Para ayudarle y hacer que sus objetivos se cumplan, 
+            sin sacrificar su salud física y mental en el camino.
+            Para ello, cuenta con módulos específicos de nutrición, estilos de vida y entrenamientos fuera de la cancha. 
+            Todos ellos adaptados para ser usados fácilmente y que sean atractivos tanto para los menores (los deportistas) 
+            como para los adultos (que son los que realmente gestionarán la aplicación).</p>
+           
+    </header>
+
+    <main>
+        <ol class="lista-numerada">
+
+            <!--<div class="texto_layout">Capturas de pantalla de la App</div>-->
+            <li>Capturas de pantalla de la App</li>
+
+            <section id="layout_imagenes">
+                <div class="contenedor-imagenes">
+                    <div class="fila">
+                        <div class="columna">
+                            <img src="imagenes/login.jpg" alt="Pantalla de login">
+                        </div>
+                        <div class="columna">
+                            <img src="imagenes/main.jpg" alt="Pantalla principal">
+                        </div>
+                        <div class="columna">
+                            <img src="imagenes/avisos.jpg" alt="Pantalla de avisos y notificaciones">
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <div class="columna">
+                            <img src="imagenes/calendario.jpg" alt="Pantalla de calendario">
+                        </div>
+                        <div class="columna">
+                            <img src="imagenes/galeria.jpg" alt="Pantalla de galeria">
+                        </div>
+                        <div class="columna">
+                            <img src="imagenes/perfil.jpg" alt="Pantalla del perfil del usuario">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tutorial">
+               <!-- <h1 class="titulo">Video Tutorial: Introducción a Miclubbi</h1>-->
+                <li>Video Tutorial: Introducción a Miclubbi</li>
+
+                <div class="contenedor-video">
+                    <div style="padding:74.72% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/928134675?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="MiClubbi Presentacion App"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                
+                    <a href="https://player.vimeo.com/video/928134675?autoplay=1" target="_blank">Ver Video en Vimeo</a>
+                    
+                </div>
+            </section>
+        </ol>
+    </main> 
+
+
+
+</body>
+</html>
+
