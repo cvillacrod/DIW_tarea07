@@ -105,6 +105,14 @@ body {
   .columna {
     width: 100%;
   }
+  .parrafo {
+    color: black;
+    text-align: justify;
+    font-size: 26px;
+    font-family: "FatMarker", "Comic Sans", sans-serif;
+    font-size: 18px;
+    font-family: "sans-serif";
+  }
 }
 .contenedor-video {
   text-align: center;

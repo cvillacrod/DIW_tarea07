@@ -137,6 +137,12 @@ body{
     .columna {
         width: $max-width;
     }
+    
+    .parrafo {
+        @include texto;
+        font-size: nth($sizes,1);
+        font-family: "sans-serif";
+      }
 }
 
 .contenedor-video {
