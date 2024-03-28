@@ -1,0 +1,275 @@
+/* Declaración de variables */
+$bordes: black;
+$border-width: 2px;
+$texto:black;
+$letras_logo: #f3f0ae;
+$enlace: #FFA000;
+$fondo: #009929;
+$mar: #1595c0;
+$olas: #daecf5;
+$cielo:#daecf5;
+$tabla: #FFA000;
+$vela:#33f55d;
+$cara: #f5dcba;
+$cuerpo : #f5334a;
+$pierna: #f5dcba;
+$brazo: #f5dcba;
+
+$sgv_width: 30%;
+$sgv_max-width:100%;
+
+$logo_width: 70%; 
+$sgv_max-width: 100%;
+
+$video_width: 50%;
+$max-width:100%;
+
+$contenedor-imagenes-width: 70%;
+
+$margen-sup: 10px; 
+
+$sizes:(18px,20px,22px,24px,26px);
+
+
+/*interpolacion en uso de funciones*/
+$fondo: "imagenes/fondo.jpg";
+body{
+    background-image:url('#{$fondo}')
+}
+/*body {    
+    background-color:$fondo;    
+}*/
+
+
+
+/*define un mixin */
+@mixin texto {
+    color: black; 
+    text-align: justify;
+    font-size:  nth($sizes,5);
+    font-family: "FatMarker", "Comic Sans", sans-serif; 
+  }
+  
+  /*utiliza el mixin en varios selectores */
+  .titulo {
+    @include texto;
+    text-align: left;
+  }
+  
+  .parrafo {
+    @include texto;
+    font-size: nth($sizes,3);
+    font-family: "sans-serif";
+  }
+
+  .lista-numerada {
+        @include texto;
+        margin-top: $margen-sup;
+  }
+
+  .lista-numerada li {
+        @include texto;
+   }
+
+
+
+
+.contenedor-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.svg-container
+{
+    width: $sgv_width;
+    max-width: $sgv_max-width; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.contenedor-logo 
+{
+    width: $logo_width; 
+    max-width: $sgv_max-width; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenedor-logo img {
+    max-width: $max-width; 
+    max-height: $max-width; 
+}
+
+/*Layout donde van las capturas de pantalla*/
+.contenedor-imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    width: $contenedor-imagenes-width;
+    height: auto;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.fila {
+    display: flex;
+    width: $max-width;
+}
+
+.columna {
+    flex: 1;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.columna img {
+    width: $max-width;
+    height: auto;
+}
+
+/* Media Query para pantallas de tamaño máximo de 600px (versión móvil) */
+@media (max-width: 600px) {
+    .columna {
+        width: $max-width;
+    }
+}
+
+.contenedor-video {
+    text-align: center; 
+    margin-top: $margen-sup;
+    width: $video_width;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+
+/*anidamiento basico*/
+a{
+    color: $enlace;
+    text-decoration:none; 
+    font-size: nth($sizes,2);
+    &:hover{       
+        border-bottom: 1px solid $enlace;
+        text-decoration: underline;
+        text-decoration-color: $enlace; 
+    }
+    &:visited{
+        text-decoration:underline;
+        text-decoration-color: $enlace; 
+    }    
+}
+
+/*Animacion SVG*/
+.mar {
+    fill: $mar; 
+    }
+
+.olas_pares
+    {        
+        stroke:$olas;   
+        stroke-dasharray: 25 25; /* patron de lineas discontinuas */
+        animation: moverDerecha 2s infinite alternate; /* duración */
+    }
+.olas_impares
+    {        
+        stroke:$olas;   
+        stroke-dasharray: 15 15; /*  patron de lineas discontinuas */
+        animation: moverIzquierda 2s infinite alternate; /* duración */
+    }
+
+.cielo 
+    {
+        fill: $cielo; 
+    }
+.tabla 
+    {
+        fill: $tabla; 
+        animation: inclinarArribaDerecha 2s ease infinite, inclinarAbajoIzquierda 2s ease infinite; /* animaciones en secuencia infinita */
+
+    }
+.vela 
+    {
+        fill: $vela; 
+        transform-origin: bottom; /* punto de origen dpara escalara la vela */
+        animation: moverVela 2s ease-in-out infinite alternate; /*animación para el movimiento de la vela */
+    }
+    
+ .cara 
+    {
+        fill:$cara; 
+        stroke: $bordes;
+        stroke-width: 2; 
+    }
+.cuerpo 
+    {
+        fill: $cuerpo; 
+    }
+.pierna,
+.brazo 
+    {
+        fill: $brazo; 
+    }
+    
+    @keyframes moverDerecha {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(50px); /* ajusta la distancia para que se muevan las olas pares */
+        }
+    }
+    
+    @keyframes moverIzquierda {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50px); /* ajusta la distancia para que se muevan las olas impares */
+        }
+    }
+    
+    
+
+    @keyframes inclinarArribaDerecha {
+        0% {
+            transform: rotate(0deg);  /*posicion inicial*/
+        } 
+        50% {
+            transform: rotate(-2deg); /* angulo de inclinación hacia arriba */
+        }
+        100% {
+            transform: rotate(0deg);  /*posicion final*/
+       }
+
+
+    }
+    
+    @keyframes inclinarAbajoIzquierda {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(-2deg); /* angulo de inclinación hacia abajo */
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+@keyframes moverVela {
+    0%, 100% {
+        transform: rotate(0deg); /* posicion inicial y final, sin rotación */
+        transform-origin: 470px 300px; /*eje para la escala*/
+    }
+    50% {
+        transform: scale(0.9) translateY(-10px); /* cambia tamaño y desplaza */
+        
+    }
+     100% {
+        transform: rotate(0deg); /* posicion inicial y final, sin rotación */
+    }
+}

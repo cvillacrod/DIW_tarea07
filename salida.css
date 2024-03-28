@@ -1,0 +1,228 @@
+@charset "UTF-8";
+/* Declaración de variables */
+/*interpolacion en uso de funciones*/
+body {
+  background-image: url("imagenes/fondo.jpg");
+}
+
+/*body {    
+    background-color:$fondo;    
+}*/
+/*define un mixin */
+/*utiliza el mixin en varios selectores */
+.titulo {
+  color: black;
+  text-align: justify;
+  font-size: 26px;
+  font-family: "FatMarker", "Comic Sans", sans-serif;
+  text-align: left;
+}
+
+.parrafo {
+  color: black;
+  text-align: justify;
+  font-size: 26px;
+  font-family: "FatMarker", "Comic Sans", sans-serif;
+  font-size: 22px;
+  font-family: "sans-serif";
+}
+
+.lista-numerada {
+  color: black;
+  text-align: justify;
+  font-size: 26px;
+  font-family: "FatMarker", "Comic Sans", sans-serif;
+  margin-top: 10px;
+}
+
+.lista-numerada li {
+  color: black;
+  text-align: justify;
+  font-size: 26px;
+  font-family: "FatMarker", "Comic Sans", sans-serif;
+}
+
+.contenedor-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svg-container {
+  width: 30%;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.contenedor-logo {
+  width: 70%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contenedor-logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*Layout donde van las capturas de pantalla*/
+.contenedor-imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fila {
+  display: flex;
+  width: 100%;
+}
+
+.columna {
+  flex: 1;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.columna img {
+  width: 100%;
+  height: auto;
+}
+
+/* Media Query para pantallas de tamaño máximo de 600px (versión móvil) */
+@media (max-width: 600px) {
+  .columna {
+    width: 100%;
+  }
+}
+.contenedor-video {
+  text-align: center;
+  margin-top: 10px;
+  width: 50%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*anidamiento basico*/
+a {
+  color: #FFA000;
+  text-decoration: none;
+  font-size: 20px;
+}
+a:hover {
+  border-bottom: 1px solid #FFA000;
+  text-decoration: underline;
+  text-decoration-color: #FFA000;
+}
+a:visited {
+  text-decoration: underline;
+  text-decoration-color: #FFA000;
+}
+
+/*Animacion SVG*/
+.mar {
+  fill: #1595c0;
+}
+
+.olas_pares {
+  stroke: #daecf5;
+  stroke-dasharray: 25 25; /* patron de lineas discontinuas */
+  animation: moverDerecha 2s infinite alternate; /* duración */
+}
+
+.olas_impares {
+  stroke: #daecf5;
+  stroke-dasharray: 15 15; /*  patron de lineas discontinuas */
+  animation: moverIzquierda 2s infinite alternate; /* duración */
+}
+
+.cielo {
+  fill: #daecf5;
+}
+
+.tabla {
+  fill: #FFA000;
+  animation: inclinarArribaDerecha 2s ease infinite, inclinarAbajoIzquierda 2s ease infinite; /* animaciones en secuencia infinita */
+}
+
+.vela {
+  fill: #33f55d;
+  transform-origin: bottom; /* punto de origen dpara escalara la vela */
+  animation: moverVela 2s ease-in-out infinite alternate; /*animación para el movimiento de la vela */
+}
+
+.cara {
+  fill: #f5dcba;
+  stroke: black;
+  stroke-width: 2;
+}
+
+.cuerpo {
+  fill: #f5334a;
+}
+
+.pierna,
+.brazo {
+  fill: #f5dcba;
+}
+
+@keyframes moverDerecha {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50px); /* ajusta la distancia para que se muevan las olas pares */
+  }
+}
+@keyframes moverIzquierda {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50px); /* ajusta la distancia para que se muevan las olas impares */
+  }
+}
+@keyframes inclinarArribaDerecha {
+  0% {
+    transform: rotate(0deg); /*posicion inicial*/
+  }
+  50% {
+    transform: rotate(-2deg); /* angulo de inclinación hacia arriba */
+  }
+  100% {
+    transform: rotate(0deg); /*posicion final*/
+  }
+}
+@keyframes inclinarAbajoIzquierda {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-2deg); /* angulo de inclinación hacia abajo */
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes moverVela {
+  0%, 100% {
+    transform: rotate(0deg); /* posicion inicial y final, sin rotación */
+    transform-origin: 470px 300px; /*eje para la escala*/
+  }
+  50% {
+    transform: scale(0.9) translateY(-10px); /* cambia tamaño y desplaza */
+  }
+  100% {
+    transform: rotate(0deg); /* posicion inicial y final, sin rotación */
+  }
+}
+
+/*# sourceMappingURL=salida.css.map */
