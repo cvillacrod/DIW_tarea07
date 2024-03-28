@@ -140,7 +140,7 @@ body{
     
     .parrafo {
         @include texto;
-        font-size: nth($sizes,1);
+        font-size: 12px;
         font-family: "sans-serif";
       }
 }
