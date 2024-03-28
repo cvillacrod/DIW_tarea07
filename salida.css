@@ -98,6 +98,10 @@ body {
 
 /* Media Query para pantallas de tamaño máximo de 600px (versión móvil) */
 @media (max-width: 600px) {
+  /* Cambiar el ancho de las columnas para ocupar todo el espacio disponible */
+  .fila {
+    flex-wrap: wrap; /* Permitir que las columnas se envuelvan */
+  }
   .columna {
     width: 100%;
   }
