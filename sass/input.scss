@@ -86,6 +86,8 @@ ul.barra-navegacion {
   .titulo {
     @include texto;
     text-align: left;
+    font-family: "sans-serif";
+    text-decoration: bold;
   }
   
   .parrafo {

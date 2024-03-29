@@ -46,6 +46,8 @@ ul.barra-navegacion li a:hover {
   font-size: 26px;
   font-family: "FatMarker", "Comic Sans", sans-serif;
   text-align: left;
+  font-family: "sans-serif";
+  text-decoration: bold;
 }
 
 .parrafo {
