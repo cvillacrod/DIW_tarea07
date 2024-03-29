@@ -163,9 +163,15 @@ ul.barra-navegacion {
     
     .parrafo {
         @include texto;
-        font-size: 12px;
+        font-size: nth($sizes,1);
         font-family: "sans-serif";
       }
+
+    .titulo {
+    @include texto;
+    font-size: nth($sizes,3);
+    text-align: left;
+    }
 }
 
 .contenedor-video {

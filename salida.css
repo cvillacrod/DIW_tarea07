@@ -125,8 +125,16 @@ ul.barra-navegacion li a:hover {
     text-align: justify;
     font-size: 26px;
     font-family: "FatMarker", "Comic Sans", sans-serif;
-    font-size: 12px;
+    font-size: 18px;
     font-family: "sans-serif";
+  }
+  .titulo {
+    color: black;
+    text-align: justify;
+    font-size: 26px;
+    font-family: "FatMarker", "Comic Sans", sans-serif;
+    font-size: 22px;
+    text-align: left;
   }
 }
 .contenedor-video {
