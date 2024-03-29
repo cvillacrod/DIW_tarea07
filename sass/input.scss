@@ -30,7 +30,7 @@ $margen-sup: 10px;
 $padding_nav: 10px; 
 
 $sizes:(18px,20px,22px,24px,26px);
-
+$margen: 50px;
 
 /*interpolacion en uso de funciones*/
 $fondo: "imagenes/fondo.jpg";
@@ -41,6 +41,10 @@ body{
     background-color:$fondo;    
 }*/
 
+main{
+    margin-left: $margen;
+    margin-right: $margen;
+}
 /*anidamiento*/
 ul.barra-navegacion {
 	list-style-type: none;
@@ -77,7 +81,7 @@ ul.barra-navegacion {
 /*define un mixin */
 @mixin texto {
     color: black; 
-    text-align: justify;
+    /*text-align: justify;*/ /*No lo acepta el validador, para mejorar la legibilidad*/
     font-size:  nth($sizes,5);
     font-family: "FatMarker", "Comic Sans", sans-serif; 
   }
@@ -164,7 +168,7 @@ ul.barra-navegacion {
 
     @mixin texto {
         color: black; 
-        text-align: justify;
+        /*text-align: justify;*/ /*No lo acepta el validador, para mejorar la legibilidad*/
         font-size:  nth($sizes,3);
         font-family: "sans-serif"; 
       }

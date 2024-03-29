@@ -8,6 +8,11 @@ body {
 /*body {    
     background-color:$fondo;    
 }*/
+main {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
 /*anidamiento*/
 ul.barra-navegacion {
   list-style-type: none;
@@ -42,7 +47,7 @@ ul.barra-navegacion li a:hover {
 /*utiliza el mixin en varios selectores */
 .titulo {
   color: black;
-  text-align: justify;
+  /*text-align: justify;*/ /*No lo acepta el validador, para mejorar la legibilidad*/
   font-size: 26px;
   font-family: "FatMarker", "Comic Sans", sans-serif;
   text-align: left;
@@ -50,7 +55,7 @@ ul.barra-navegacion li a:hover {
 
 .parrafo {
   color: black;
-  text-align: justify;
+  /*text-align: justify;*/ /*No lo acepta el validador, para mejorar la legibilidad*/
   font-size: 26px;
   font-family: "FatMarker", "Comic Sans", sans-serif;
   font-size: 22px;
@@ -122,14 +127,14 @@ ul.barra-navegacion li a:hover {
   }
   .parrafo {
     color: black;
-    text-align: justify;
+    /*text-align: justify;*/ /*No lo acepta el validador, para mejorar la legibilidad*/
     font-size: 22px;
     font-family: "sans-serif";
     font-size: 18px;
   }
   .titulo {
     color: black;
-    text-align: justify;
+    /*text-align: justify;*/ /*No lo acepta el validador, para mejorar la legibilidad*/
     font-size: 22px;
     font-family: "sans-serif";
     text-align: left;
