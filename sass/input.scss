@@ -41,34 +41,30 @@ body{
     background-color:$fondo;    
 }*/
 
-/* barra de navegacon */
+/*anidamiento*/
 ul.barra-navegacion {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: $letras_logo;
-    text-align: center;
-    font-size:  nth($sizes,3);
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color:  $letras_logo;
+	text-align: center;
+	font-size: nth($sizes,3);
+	li {
+		display: inline-block;
+		width: $width_nav;
+		a {
+			display: block;
+			color: $texto;
+			text-decoration: none;
+			padding: $padding_nav;
+			font-weight: bold;
+			&:hover {
+				color: $fondo_color;
+			}
+		}
+	}
 }
 
-/*elementos de la barra de navegacion */
-ul.barra-navegacion li {
-    display: inline-block;
-    width: $width_nav; /* Cada elemento ocupa un tercio del ancho */
-}
-
-/* enlaces */
-ul.barra-navegacion li a {
-    display: block;
-    color: $texto;
-    text-decoration: none;
-    padding: $padding_nav;
-    font-weight: bold;
-}
-
-ul.barra-navegacion li a:hover {
-    color: $fondo_color;
-}
 
 /* Media query para dispositivos móviles */
 @media screen and (max-width: 600px) {
@@ -97,17 +93,6 @@ ul.barra-navegacion li a:hover {
     font-size: nth($sizes,3);
     font-family: "sans-serif";
   }
-
-  .lista-numerada {
-        @include texto;
-        margin-top: $margen-sup;
-  }
-
-  .lista-numerada li {
-        @include texto;
-   }
-
-
 
 
 .contenedor-titulo {

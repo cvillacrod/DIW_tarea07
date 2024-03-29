@@ -8,7 +8,7 @@ body {
 /*body {    
     background-color:$fondo;    
 }*/
-/* barra de navegacon */
+/*anidamiento*/
 ul.barra-navegacion {
   list-style-type: none;
   margin: 0;
@@ -17,14 +17,10 @@ ul.barra-navegacion {
   text-align: center;
   font-size: 22px;
 }
-
-/*elementos de la barra de navegacion */
 ul.barra-navegacion li {
   display: inline-block;
-  width: 30%; /* Cada elemento ocupa un tercio del ancho */
+  width: 30%;
 }
-
-/* enlaces */
 ul.barra-navegacion li a {
   display: block;
   color: black;
@@ -32,7 +28,6 @@ ul.barra-navegacion li a {
   padding: 10px;
   font-weight: bold;
 }
-
 ul.barra-navegacion li a:hover {
   color: #009929;
 }
@@ -60,21 +55,6 @@ ul.barra-navegacion li a:hover {
   font-family: "FatMarker", "Comic Sans", sans-serif;
   font-size: 22px;
   font-family: "sans-serif";
-}
-
-.lista-numerada {
-  color: black;
-  text-align: justify;
-  font-size: 26px;
-  font-family: "FatMarker", "Comic Sans", sans-serif;
-  margin-top: 10px;
-}
-
-.lista-numerada li {
-  color: black;
-  text-align: justify;
-  font-size: 26px;
-  font-family: "FatMarker", "Comic Sans", sans-serif;
 }
 
 .contenedor-titulo {
