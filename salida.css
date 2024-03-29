@@ -46,8 +46,6 @@ ul.barra-navegacion li a:hover {
   font-size: 26px;
   font-family: "FatMarker", "Comic Sans", sans-serif;
   text-align: left;
-  font-family: "sans-serif";
-  text-decoration: bold;
 }
 
 .parrafo {
@@ -56,7 +54,7 @@ ul.barra-navegacion li a:hover {
   font-size: 26px;
   font-family: "FatMarker", "Comic Sans", sans-serif;
   font-size: 22px;
-  font-family: "sans-serif";
+  font-family: "Comic Sans";
 }
 
 .contenedor-titulo {
@@ -125,17 +123,15 @@ ul.barra-navegacion li a:hover {
   .parrafo {
     color: black;
     text-align: justify;
-    font-size: 26px;
-    font-family: "FatMarker", "Comic Sans", sans-serif;
-    font-size: 18px;
+    font-size: 22px;
     font-family: "sans-serif";
+    font-size: 18px;
   }
   .titulo {
     color: black;
     text-align: justify;
-    font-size: 26px;
-    font-family: "FatMarker", "Comic Sans", sans-serif;
     font-size: 22px;
+    font-family: "sans-serif";
     text-align: left;
   }
 }

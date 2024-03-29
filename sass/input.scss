@@ -86,14 +86,13 @@ ul.barra-navegacion {
   .titulo {
     @include texto;
     text-align: left;
-    font-family: "sans-serif";
-    text-decoration: bold;
+
   }
   
   .parrafo {
     @include texto;
     font-size: nth($sizes,3);
-    font-family: "sans-serif";
+    font-family: "Comic Sans"; 
   }
 
 
@@ -162,19 +161,25 @@ ul.barra-navegacion {
     .columna {
         width: $max-width;
     }
-    
+
+    @mixin texto {
+        color: black; 
+        text-align: justify;
+        font-size:  nth($sizes,3);
+        font-family: "sans-serif"; 
+      }
+
     .parrafo {
         @include texto;
         font-size: nth($sizes,1);
-        font-family: "sans-serif";
       }
 
     .titulo {
-    @include texto;
-    font-size: nth($sizes,3);
-    text-align: left;
-    }
+        @include texto;
+        text-align: left;
+        }
 }
+
 
 .contenedor-video {
     text-align: center; 
